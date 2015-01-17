@@ -1,0 +1,52 @@
+<template name="onlineReservation">
+    <div class="container">
+        <div class="col-md-8">
+            <div class="{{alertClass}}">
+                {{alertText}}
+            </div>
+            <h3>On-line reservation</h3>
+            <form class="onlineReservationForm" name="onlineReservationForm" id="onlineReservationForm" validate="">
+                <div class="control-group form-group">
+                    <div class="controls">
+                        <label>Reservation Date & Time:</label>
+                        <div class="input-group date" id="resdatetime">
+                            <input name="resDateTimeField" style="background-color: #eee; cursor: not-allowed;" type="text" class="form-control" required=""/>
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                        </div>
+                        <div class="help-block"></div>
+                    </div>
+                </div>
+                <div class="control-group form-group">
+                    <div class="controls">
+                        <label style="color:white">Phone Number:</label>
+                        <label>(Reservation will be confirmed with a phone call)</label>
+                        <input type="tel" name="phoneField" class="form-control" required=""/>
+                        <div class="help-block"></div></div>
+                </div>
+                <div class="control-group form-group">
+                    <div class="controls">
+                        <label style="color:white">Email Address:</label>
+                        <input name="emailField" type="email" class="form-control" required=""/>
+                        <div class="help-block"></div></div>
+                </div>
+                <div class="control-group form-group">
+                    <div class="controls">
+                        <label style="color:white">From:</label>
+                        <input name="fromField" type="text" class="form-control" required=""/>
+                        <div class="help-block"></div></div>
+                </div>
+                <div class="control-group form-group">
+                    <div class="controls">
+                        <label style="color:white">Destination:</label>
+                        <input name="destinationField" type="text" class="form-control" required=""/>
+                        <div class="help-block"></div></div>
+                </div>
+                <div id="alert">
+                    <p id="alert-message"></p>
+                </div>
+                <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+            </form>
+        </div>
+        {{> footer }}
+    </div>
+</template>

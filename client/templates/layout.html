@@ -1,6 +1,5 @@
 <template name="layout">
     <body>
-
         <!-- Navigation -->
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="container">
@@ -18,11 +17,16 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
                         <li>
-                            <a href="{{pathFor 'online-reservation'}}">On-line reservation</a>
+                            <a href="{{pathFor 'onlineReservation'}}">On-line reservation</a>
                         </li>
                         <li>
                             <a href="#">Contact</a>
                         </li>
+                        {{#if currentUser }}
+                            <li>
+                                <a href="#">Log out</a>
+                            </li>
+                        {{/if}}
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
@@ -30,12 +34,28 @@
             <!-- /.container -->
         </nav>
         <br><br><br>
-        <div style="margin-left:22%;">
-            <img src="/images/xpresspluss1.jpg"/>
-            <img src="/images/xpresspluss2.jpg"/>
-            <img src="/images/xpresspluss5.jpg"/>
-            <img src="/images/xpresspluss3.jpg"/>
+        <div class="row">
+            <div class="col-lg-12">
+                <div style="margin-left:22%;">
+                    <img src="/images/xpresspluss1.jpg"/>
+                    <img src="/images/xpresspluss2.jpg"/>
+                    <img src="/images/xpresspluss5.jpg"/>
+                    <img src="/images/xpresspluss3.jpg"/>
+                </div>
+            </div>
         </div>
+            <!--{{#each notifications}}-->
+            <!--&lt;!&ndash;alert alert-success alert-dismissable&ndash;&gt;-->
+                <!--<div class="row" style="z-index:9999;position:absolute;top:0;right:0;">-->
+                    <!--<div class="col-lg-4">-->
+                        <!--<div class="{{class}}">-->
+                            <!--<button name ="removeNotification" type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>-->
+                            <!--{{text}}-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--{{/each}}-->
+        <br><br>
         {{> yield}}
     </body>
 </template>

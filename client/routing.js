@@ -4,5 +4,6 @@ Router.configure({
 
 Router.map(function(){
   this.route('homepage', {path : '/'});
-  this.route('online-reservation');
+  this.route('onlineReservation');
+  this.route('login');
 });

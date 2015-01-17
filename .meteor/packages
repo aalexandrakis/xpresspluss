@@ -6,3 +6,7 @@
 
 meteor-platform
 iron:router
+email
+mrt:meteor-nodemailer
+accounts-ui
+accounts-password
