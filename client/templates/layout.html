@@ -1,6 +1,7 @@
 <template name="layout">
     <body>
         <!-- Navigation -->
+        {{messages}}
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
@@ -16,15 +17,13 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="{{pathFor 'onlineReservation'}}">On-line reservation</a>
-                        </li>
-                        <li>
-                            <a href="#">Contact</a>
-                        </li>
                         {{#if currentUser }}
                             <li>
                                 <a href="#">Log out</a>
+                            </li>
+                        {{else}}
+                            <li>
+                                <a href="{{pathFor 'onlineReservation'}}">On-line reservation</a>
                             </li>
                         {{/if}}
                     </ul>
