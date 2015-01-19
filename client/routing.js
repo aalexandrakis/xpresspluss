@@ -1,6 +1,6 @@
-//Router.configure({
-//  layoutTemplate:'layout'
-//});
+Router.configure({
+  layoutTemplate:'layout'
+});
 //
 //Router.map(function(){
 //  this.route('homepage', {path : '/'});
@@ -10,22 +10,9 @@
 //});
 
 Router.route('/', function () {
-  this.layout('Layout');
-  this.render('Homepage');
+  this.render('homepage');
 });
-Router.route('/homepage', function () {
-  this.layout('Layout');
-  this.render('Homepage');
-});
-Router.route("/onlineReservation", function(){
-  this.layout('Layout');
-  this.render("OnlineReservation");
-});
-Router.route("/login", function(){
-  this.layout('Layout');
-  this.render("Login");
-});
-Router.route("/viewReservations", function(){
-  this.layout('Layout');
-  this.render("ViewReservations");
-});
+Router.route('/homepage');
+Router.route("/onlineReservation");
+Router.route("/login");
+Router.route("/viewReservations");

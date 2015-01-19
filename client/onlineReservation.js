@@ -1,4 +1,4 @@
-Template.OnlineReservation.rendered = function() {
+Template.onlineReservation.rendered = function() {
     $('#resdatetime').datetimepicker({
           format: "dd-mm-yyyy hh:ii",
           todayBtn: true,
@@ -21,7 +21,7 @@ Template.OnlineReservation.rendered = function() {
 var alertClass = "alert alert-success";
 var alertText = "test test test";
 
-Template.OnlineReservation.helpers({
+Template.onlineReservation.helpers({
             "alertClass" : function(){
                 return Session.get("alertClass");
             },
@@ -30,7 +30,7 @@ Template.OnlineReservation.helpers({
             }
 });
 
-Template.OnlineReservation.events({
+Template.onlineReservation.events({
     "submit #onlineReservationForm" : function(event, template){
         var message = "At " + event.target.resDateTimeField.value +
            "<br>phone: " + event.target.phoneField.value +
