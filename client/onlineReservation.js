@@ -43,7 +43,8 @@ Template.onlineReservation.events({
                                 from : event.target.fromField.value,
                                 to : event.target.destinationField.value,
                                 confirmed : false,
-                                open : true
+                                closed : false,
+                                cancel : false
            });
 
            Meteor.call('sendEmail', null, "New Reservation", message, function(error, result){

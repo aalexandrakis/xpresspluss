@@ -1,7 +1,6 @@
 <template name="layout">
     <body>
         <!-- Navigation -->
-        {{messages}}
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
@@ -19,6 +18,9 @@
                     <ul class="nav navbar-nav navbar-right">
                         {{#if currentUser }}
                             <li>
+                                <a href="{{pathFor 'viewReservations'}}">View reservations</a>
+                            </li>
+                            <li>
                                 <a id="logOut" href="{{pathFor 'homepage'}}">Log out</a>
                             </li>
                         {{else}}
@@ -33,16 +35,16 @@
             <!-- /.container -->
         </nav>
         <br><br><br>
-        <div class="row">
-            <div class="col-lg-12">
-                <div style="margin-left:22%;">
-                    <img src="/images/xpresspluss1.jpg"/>
-                    <img src="/images/xpresspluss2.jpg"/>
-                    <img src="/images/xpresspluss5.jpg"/>
-                    <img src="/images/xpresspluss3.jpg"/>
-                </div>
-            </div>
-        </div>
+        <!--<div class="row">-->
+            <!--<div class="col-lg-12">-->
+                <!--<div style="margin-left:22%;">-->
+                    <!--<img src="/images/xpresspluss1.jpg"/>-->
+                    <!--<img src="/images/xpresspluss2.jpg"/>-->
+                    <!--<img src="/images/xpresspluss5.jpg"/>-->
+                    <!--<img src="/images/xpresspluss3.jpg"/>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
         <br><br>
         {{> yield}}
     </body>
