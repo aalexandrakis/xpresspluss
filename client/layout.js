@@ -1,6 +1,5 @@
-Template.layout.events({
+Template.Layout.events({
     "click #logOut" : function(event, template){
-        console.log("logging out");
         Meteor.logout();
     }
 });

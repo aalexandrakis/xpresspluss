@@ -3,7 +3,7 @@ Tracker.autorun(function(){
     Meteor.subscribe("reservations", Session.get("reservationsFilter") != null ? Session.get("reservationsFilter") : "unconfirmed");
 });
 
-Template.viewReservations.helpers({
+Template.ViewReservations.helpers({
     "Reservations" : function(){
          return Reservations.find();
     },
@@ -20,7 +20,7 @@ Template.viewReservations.helpers({
     }
 });
 
-Template.viewReservations.events({
+Template.ViewReservations.events({
     "click [name=reservationStatus]" : function(event, template){
         Session.set("reservationsFilter", template.find("[name=reservationStatus]:checked").value);
     },

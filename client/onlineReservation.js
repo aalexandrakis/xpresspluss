@@ -1,4 +1,4 @@
-Template.onlineReservation.rendered = function() {
+Template.OnlineReservation.rendered = function() {
     $('#resdatetime').datetimepicker({
           format: "dd-mm-yyyy hh:ii",
           todayBtn: true,
@@ -21,7 +21,7 @@ Template.onlineReservation.rendered = function() {
 var alertClass = "alert alert-success";
 var alertText = "test test test";
 
-Template.onlineReservation.helpers({
+Template.OnlineReservation.helpers({
             "alertClass" : function(){
                 return Session.get("alertClass");
             },
@@ -30,7 +30,7 @@ Template.onlineReservation.helpers({
             }
 });
 
-Template.onlineReservation.events({
+Template.OnlineReservation.events({
     "submit #onlineReservationForm" : function(event, template){
         var message = "At " + event.target.resDateTimeField.value +
            "<br>phone: " + event.target.phoneField.value +
@@ -44,7 +44,7 @@ Template.onlineReservation.events({
                                 to : event.target.destinationField.value,
                                 confirmed : false,
                                 closed : false,
-                                cancel : false
+                                canceled : false
            });
 
            Meteor.call('sendEmail', null, "New Reservation", message, function(error, result){
