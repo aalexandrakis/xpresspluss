@@ -9,7 +9,18 @@
         <div class="col-lg-12">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    View unconfirmed reservations
+                    <div class="form-group">
+                        <label>Filter Reservations List</label>
+                        <label class="radio-inline">
+                            <input type="radio" name="reservationStatus" id="unconfirmed" value="unconfirmed" checked="">Unonfirmed
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="reservationStatus" id="confirmed" value="confirmed">Confirmed
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="reservationStatus" id="closed" value="closed">Closed
+                        </label>
+                    </div>
                 </div>
                 <!-- /.panel-heading -->
                 <div class="panel-body"  style="background-color:#222">

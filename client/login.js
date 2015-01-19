@@ -16,13 +16,11 @@ Template.login.events({
           // login attempt has failed.
           t.find('#alert').className = "alert alert-danger";
           t.find('#alert-message').innerHTML = err.reason;
-
-          console.log(err);
         } else {
           // The user has been logged in.
           t.find('#alert').className = "alert alert-success";
           t.find('#alert-message').innerHTML = "Welcome";
-
+          Router.go('/viewReservations')
         }
       });
          return false;

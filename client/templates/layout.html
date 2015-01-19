@@ -19,7 +19,7 @@
                     <ul class="nav navbar-nav navbar-right">
                         {{#if currentUser }}
                             <li>
-                                <a href="#">Log out</a>
+                                <a id="logOut" href="{{pathFor 'homepage'}}">Log out</a>
                             </li>
                         {{else}}
                             <li>
@@ -43,17 +43,6 @@
                 </div>
             </div>
         </div>
-            <!--{{#each notifications}}-->
-            <!--&lt;!&ndash;alert alert-success alert-dismissable&ndash;&gt;-->
-                <!--<div class="row" style="z-index:9999;position:absolute;top:0;right:0;">-->
-                    <!--<div class="col-lg-4">-->
-                        <!--<div class="{{class}}">-->
-                            <!--<button name ="removeNotification" type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>-->
-                            <!--{{text}}-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--{{/each}}-->
         <br><br>
         {{> yield}}
     </body>

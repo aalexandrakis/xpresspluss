@@ -8,6 +8,16 @@ Reservations.allow({
     }
 });
 
-Meteor.publish("reservations", function () {
-    return Reservations.find();
+Meteor.publish("reservations", function (selector) {
+    currentUser = Meteor.users.findOne({ _id : this.userId});
+    if (currentUser && currentUser.role == "driver"){
+        if (selector == "unconfirmed"){
+            return Reservations.find({confirmed : false});
+        } else if (selector == "confirmed"){
+            return Reservations.find({confirmed : true, open: true});
+        } else if (selector == "closed"){
+            return Reservations.find({confirmed : true, open: false});
+        }
+
+    }
 });
