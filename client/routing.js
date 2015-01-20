@@ -14,5 +14,6 @@ Router.route('/', function () {
 });
 Router.route('/homepage' , {name : 'homepage'});
 Router.route("/onlineReservation", {name : 'onlineReservation'});
-Router.route("/login", {name : 'login'});
+Router.route("/driverLogin", {name : 'driverLogin'});
 Router.route("/viewReservations", {name : 'viewReservations'});
+Router.route("/passwordRecovery", {name : 'passwordRecovery'});

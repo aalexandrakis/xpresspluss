@@ -1,4 +1,4 @@
-Template.login.events({
+Template.driverLogin.events({
     'submit #login-form' : function(e, t){
       e.preventDefault();
       // retrieve the input field values
