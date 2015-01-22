@@ -14,11 +14,6 @@
                                 <div class="timeline-badge"><i class="fa fa-bus"></i>
                                 </div>
                                 <div class="timeline-panel">
-                                    <!--<div class="timeline-heading">-->
-                                        <!--<h4 class="timeline-title">Lorem ipsum dolor</h4>-->
-                                        <!--<p><small class="text-muted"><i class="fa fa-clock-o"></i> 11 hours ago via Twitter</small>-->
-                                        <!--</p>-->
-                                    <!--</div>-->
                                     <div class="timeline-body">
                                         <p>Fast reliable and safe transportation.</p>
                                     </div>
@@ -28,9 +23,6 @@
                                 <div class="timeline-badge primary"><i class="fa fa-home"></i>
                                 </div>
                                 <div class="timeline-panel">
-                                    <!--<div class="timeline-heading">-->
-                                        <!--<h4 class="timeline-title">Lorem ipsum dolor</h4>-->
-                                    <!--</div>-->
                                     <div class="timeline-body">
                                         <p>Travel from your home or office to the airport and arrive rested and without the worry and expense of airport parking or car rentals.</p>
                                     </div>
@@ -40,9 +32,6 @@
                                 <div class="timeline-badge"><i class="fa fa-plane"></i>
                                 </div>
                                 <div class="timeline-panel">
-                                    <!--<div class="timeline-heading">-->
-                                        <!--<h4 class="timeline-title">Lorem ipsum dolor</h4>-->
-                                    <!--</div>-->
                                     <div class="timeline-body">
                                         <p>Xpress+ taxi and limo company offers luxury transportation service to all Airports Atlantic city Casinos Jersey Gardens and more.</p>
                                     </div>
@@ -52,9 +41,6 @@
                                 <div class="timeline-badge primary"><i class="fa fa-dollar"></i>
                                 </div>
                                 <div class="timeline-panel">
-                                    <!--<div class="timeline-heading">-->
-                                        <!--<h4 class="timeline-title">Lorem ipsum dolor</h4>-->
-                                    <!--</div>-->
                                     <div class="timeline-body">
                                         <p>Vale rates Newark airport starting from 30$.</p>
                                     </div>
@@ -64,28 +50,16 @@
                                 <div class="timeline-badge"><i class="fa fa-credit-card"></i>
                                 </div>
                                 <div class="timeline-panel">
-                                    <!--<div class="timeline-heading">-->
-                                        <!--<h4 class="timeline-title">Lorem ipsum dolor</h4>-->
-                                    <!--</div>-->
                                     <div class="timeline-body">
                                         <p>From Manhattan to JFK available flat rates.</p>
-                                        <!--<hr>-->
-                                        <!--<div class="btn-group">-->
-                                            <!--<button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">-->
-                                                <!--<i class="fa fa-gear"></i>  <span class="caret"></span>-->
-                                            <!--</button>-->
-                                            <!--<ul class="dropdown-menu" role="menu">-->
-                                                <!--<li><a href="#">Action</a>-->
-                                                <!--</li>-->
-                                                <!--<li><a href="#">Another action</a>-->
-                                                <!--</li>-->
-                                                <!--<li><a href="#">Something else here</a>-->
-                                                <!--</li>-->
-                                                <!--<li class="divider"></li>-->
-                                                <!--<li><a href="#">Separated link</a>-->
-                                                <!--</li>-->
-                                            <!--</ul>-->
-                                        <!--</div>-->
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="timeline-inverted">
+                                {{> callNumberButton}}
+                                <div class="timeline-panel">
+                                    <div class="timeline-body">
+                                        <p>Call us at <a href="tel:{{phone}}">{{phone}}</a></p>
                                     </div>
                                 </div>
                             </li>
@@ -95,26 +69,14 @@
                 </div>
             </div>
         </div>
-        <!--<div class="row">-->
-            <!--<div class="col-lg-12">-->
-                <!--<h1 class="page-header">-->
-                    <!--Welcome to Xpress+ taxi and limo services-->
-                <!--</h1>-->
-            <!--</div>-->
-            <!--<div class="col-md-10">-->
-                <!--<div class="panel panel-default">-->
-                    <!--<div class="panel-heading">-->
-                        <!--<h4>Fast reliable and safe transportation</h4>-->
-                    <!--</div>-->
-                    <!--<div class="panel-body" style="background-color: #222">-->
-                        <!--<p>Travel from your home or office to the airport and arrive rested and without the worry and expense of airport parking or car rentals.</p>-->
-                        <!--<p>Xpress+ taxi and limo company  offers luxury  transportation service to all  Airports Atlantic city Casinos Jersey Gardens  and more.</p>-->
-                        <!--<p>Vale rates Newark airport  starting from 30$</p>-->
-                        <!--<p>From Manhattan to JFK available flat rates</p>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
         {{> footer }}
+    </div>
+</template>
+
+<template name="callNumberButton">
+    <div class="timeline-badge primary" name="callNumber" id="callNumber">
+        <a href="tel:{{phone}}" style="color:white">
+            <i class="fa fa-phone"></i>
+        </a>
     </div>
 </template>

@@ -15,6 +15,9 @@ Meteor.methods({
     } catch (ex) {
         throw new Meteor.Error(500, "Internal Server Error");
     }
+  },
+  getPhone : function(){
+        return process.env.XPRESS_PLUSS_PHONE;
   }
 });
 

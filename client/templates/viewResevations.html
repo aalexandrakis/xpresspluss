@@ -1,12 +1,12 @@
 <template name="viewReservations">
     <div class="row">
-        <div class="col-lg-10">
+        <div class="col-sm-12">
             <h1 class="page-header">Reservations</h1>
         </div>
         <!-- /.col-lg-12 -->
     </div>
     <div class="row">
-        <div class="col-lg-10">
+        <div class="col-sm-12">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <div class="form-group">
@@ -26,7 +26,7 @@
                     </div>
                 </div>
                 <!-- /.panel-heading -->
-                <div class="panel-body"  style="background-color:#222">
+                <div class="panel-body "  style="background-color:#222">
                     <div class="dataTable_wrapper">
                         <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                             <thead>
@@ -52,7 +52,7 @@
                                                     <a class="btn btn-success" id="buttonAction">{{actionValue}}</a>
                                                     <a class="btn btn-danger" id="cancel">Cancel</a>
                                                 {{else}}
-                                                    <pre>No actions</pre>
+                                                    <a class="btn btn-success disabled">No actions</a>
                                                 {{/unless}}
                                             </td>
                                             <!--<td class="center">4</td>-->
