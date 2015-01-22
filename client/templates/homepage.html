@@ -56,10 +56,14 @@
                                 </div>
                             </li>
                             <li class="timeline-inverted">
-                                {{> callNumberButton}}
+                                <div class="timeline-badge primary" name="callNumber" id="callNumber">
+                                    <a href="tel:{{phone}}" style="color:white">
+                                        <i class="fa fa-phone"></i>
+                                    </a>
+                                </div>
                                 <div class="timeline-panel">
                                     <div class="timeline-body">
-                                        <p>Call us at <a href="tel:{{phone}}">{{phone}}</a></p>
+                                        <p>Call us at <a href="tel:{{phone}}">+30-694-821-1181</a></p>
                                     </div>
                                 </div>
                             </li>
@@ -70,13 +74,5 @@
             </div>
         </div>
         {{> footer }}
-    </div>
-</template>
-
-<template name="callNumberButton">
-    <div class="timeline-badge primary" name="callNumber" id="callNumber">
-        <a href="tel:{{phone}}" style="color:white">
-            <i class="fa fa-phone"></i>
-        </a>
     </div>
 </template>

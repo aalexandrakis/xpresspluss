@@ -8,7 +8,6 @@ Router.configure({
 //  this.route('login');
 //  this.route('viewReservations');
 //});
-
 Router.route('/', function () {
   this.render('homepage', {name : 'homepage'});
 });
