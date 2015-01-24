@@ -10,3 +10,4 @@ email
 mrt:meteor-nodemailer
 accounts-ui
 accounts-password
+spiderable
