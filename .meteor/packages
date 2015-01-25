@@ -10,4 +10,5 @@ email
 mrt:meteor-nodemailer
 accounts-ui
 accounts-password
-spiderable
+iron:dynamic-template
+iron:layout

@@ -25,6 +25,6 @@ Meteor.publish("reservations", function (selector) {
         } else if (selector == "canceled"){
             return Reservations.find({canceled : true});
         }
-
+        this.ready();
     }
 });
