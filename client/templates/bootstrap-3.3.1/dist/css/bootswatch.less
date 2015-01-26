@@ -1,56 +1,14 @@
-// Superhero 3.3.2
+// Cyborg 3.3.2
 // Bootswatch
 // -----------------------------------------------------
 
-@import url("//fonts.googleapis.com/css?family=Lato:300,400,700");
+@import url("//fonts.googleapis.com/css?family=Roboto:400,700");
 
 // Navbar =====================================================================
 
-.navbar {
-  .box-shadow(none);
-  border: none;
-  font-size: 12px;
-
-  &-default {
-
-    .badge {
-      background-color: #fff;
-      color: @navbar-default-bg;
-    }
-  }
-
-  &-inverse {
-
-    .badge {
-      background-color: #fff;
-      color: @navbar-inverse-bg;
-    }
-  }
-}
-
 // Buttons ====================================================================
 
-.btn {
-
-  font-weight: 300;
-
-  &-default {
-    &:hover {
-      background-color: darken(@btn-default-bg, 3%);
-    }
-  }
-
-  &-sm,
-  &-xs {
-    font-size: 12px;
-  }
-}
-
 // Typography =================================================================
-
-body {
-  font-weight: 300;
-}
 
 .text-primary,
 .text-primary:hover {
@@ -77,35 +35,11 @@ body {
   color: @brand-info;
 }
 
-.page-header {
-  border-bottom-color: @table-border-color;
-}
-
-.dropdown-menu {
-
-  border: none;
-  margin: 0;
-  .box-shadow(none);
-
-  > li > a {
-    font-size: 12px;
-    font-weight: 300;
-  }
-}
-
-.btn-group.open .dropdown-toggle {
-  .box-shadow(none);
-}
-
-.dropdown-header {
-  font-size: 12px;
-}
-
 // Tables =====================================================================
 
 table,
 .table {
-  font-size: 12px;
+  color: #fff;
 
   a:not(.btn) {
     color: #fff;
@@ -119,36 +53,13 @@ table,
   .text-muted {
     color: @text-muted;
   }
+}
 
-  > thead > tr > th,
-  > tbody > tr > th,
-  > tfoot > tr > th,
-  > thead > tr > td,
-  > tbody > tr > td,
-  > tfoot > tr > td {
-    border-color: transparent;
-  }
- }
+.table-responsive > .table {
+  background-color: @table-bg;
+}
 
 // Forms ======================================================================
-
-input,
-textarea {
-  color: @input-color;
-}
-
-label,
-.radio label,
-.checkbox label,
-.help-block {
-  font-size: 12px;
-  font-weight: 300;
-}
-
-.input-addon,
-.input-group-addon {
-  color: @text-color;
-}
 
 .has-warning {
   .help-block,
@@ -157,8 +68,10 @@ label,
     color: @brand-warning;
   }
 
+  .form-control,
+  .form-control:focus,
   .input-group-addon {
-    border: none;
+    border-color: @brand-warning;
   }
 }
 
@@ -169,8 +82,10 @@ label,
     color: @brand-danger;
   }
 
+  .form-control,
+  .form-control:focus,
   .input-group-addon {
-    border: none;
+    border-color: @brand-danger;
   }
 }
 
@@ -181,71 +96,56 @@ label,
     color: @brand-success;
   }
 
+  .form-control,
+  .form-control:focus,
   .input-group-addon {
-    border: none;
+    border-color: @brand-success;
   }
 }
 
-.form-control:focus {
-  .box-shadow(none);
+legend {
+  color: #fff;
 }
 
-.has-warning,
-.has-error,
-.has-success {
-  .form-control:focus {
-    .box-shadow(none);
-  }
+.input-group-addon {
+  background-color: @btn-default-bg;
 }
 
 // Navs =======================================================================
 
-.nav {
-  .open > a,
-  .open > a:hover,
-  .open > a:focus {
-    border-color: transparent;
-  }
-}
-
-.nav-tabs {
-  > li > a {
-    color: @text-color;
-  }
-}
-
-.nav-pills {
-  > li > a {
-    color: @text-color;
-  }
-}
-
+.nav-tabs,
+.nav-pills,
+.breadcrumb,
 .pager {
+
   a {
-    color: @text-color;
+    color: #fff;
   }
 }
 
 // Indicators =================================================================
 
-.label {
-  font-weight: 300;
-}
-
 .alert {
-  color: #fff;
 
-  a,
-  .alert-link {
-    color: #fff;
+  .alert-link,
+  a {
+    color: @alert-warning-text;
+    text-decoration: underline;
+  }
+
+  .close {
+    text-decoration: none;
   }
 }
 
 .close {
+  color: #fff;
+  text-decoration: none;
   opacity: 0.4;
 
   &:hover,
   &:focus {
+    color: #fff;
     opacity: 1;
   }
 }
@@ -254,8 +154,10 @@ label,
 
 // Containers =================================================================
 
-.well {
-  .box-shadow(none);
+a.thumbnail:hover,
+a.thumbnail:focus,
+a.thumbnail.active {
+  border-color: @thumbnail-border;
 }
 
 a.list-group-item {
@@ -263,7 +165,7 @@ a.list-group-item {
   &.active,
   &.active:hover,
   &.active:focus {
-    border: none;
+    border-color: @list-group-border;
   }
 
   &-success {
@@ -300,33 +202,9 @@ a.list-group-item {
   }
 }
 
-.panel {
-  border: none;
+.jumbotron {
 
-  &-default > .panel-heading {
-    background-color: @table-bg-hover;
-    color: @text-color;
-  }
-}
-
-.thumbnail {
-  background-color: @well-bg;
-  border: none;
-}
-
-.modal {
-  padding: 0;
-
-  &-header,
-  &-footer {
-    background-color: @table-bg-hover;
-    border: none;
-    border-radius: 0;
-  }
-}
-
-.popover {
-  &-title {
-    border: none;
+  h1, h2, h3, h4, h5, h6 {
+    color: #fff;
   }
 }
