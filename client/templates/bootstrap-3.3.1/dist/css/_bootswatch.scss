@@ -1,14 +1,56 @@
-// Cyborg 3.3.2
+// Superhero 3.3.2
 // Bootswatch
 // -----------------------------------------------------
 
-@import url("//fonts.googleapis.com/css?family=Roboto:400,700");
+@import url("//fonts.googleapis.com/css?family=Lato:300,400,700");
 
 // Navbar =====================================================================
 
+.navbar {
+  @include box-shadow(none);
+  border: none;
+  font-size: 12px;
+
+  &-default {
+
+    .badge {
+      background-color: #fff;
+      color: $navbar-default-bg;
+    }
+  }
+
+  &-inverse {
+
+    .badge {
+      background-color: #fff;
+      color: $navbar-inverse-bg;
+    }
+  }
+}
+
 // Buttons ====================================================================
 
+.btn {
+
+  font-weight: 300;
+
+  &-default {
+    &:hover {
+      background-color: darken($btn-default-bg, 3%);
+    }
+  }
+
+  &-sm,
+  &-xs {
+    font-size: 12px;
+  }
+}
+
 // Typography =================================================================
+
+body {
+  font-weight: 300;
+}
 
 .text-primary,
 .text-primary:hover {
@@ -35,11 +77,35 @@
   color: $brand-info;
 }
 
+.page-header {
+  border-bottom-color: $table-border-color;
+}
+
+.dropdown-menu {
+
+  border: none;
+  margin: 0;
+  @include box-shadow(none);
+
+  > li > a {
+    font-size: 12px;
+    font-weight: 300;
+  }
+}
+
+.btn-group.open .dropdown-toggle {
+  @include box-shadow(none);
+}
+
+.dropdown-header {
+  font-size: 12px;
+}
+
 // Tables =====================================================================
 
 table,
 .table {
-  color: #fff;
+  font-size: 12px;
 
   a:not(.btn) {
     color: #fff;
@@ -53,13 +119,36 @@ table,
   .text-muted {
     color: $text-muted;
   }
-}
 
-.table-responsive > .table {
-  background-color: $table-bg;
-}
+  > thead > tr > th,
+  > tbody > tr > th,
+  > tfoot > tr > th,
+  > thead > tr > td,
+  > tbody > tr > td,
+  > tfoot > tr > td {
+    border-color: transparent;
+  }
+ }
 
 // Forms ======================================================================
+
+input,
+textarea {
+  color: $input-color;
+}
+
+label,
+.radio label,
+.checkbox label,
+.help-block {
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.input-addon,
+.input-group-addon {
+  color: $text-color;
+}
 
 .has-warning {
   .help-block,
@@ -68,10 +157,8 @@ table,
     color: $brand-warning;
   }
 
-  .form-control,
-  .form-control:focus,
   .input-group-addon {
-    border-color: $brand-warning;
+    border: none;
   }
 }
 
@@ -82,10 +169,8 @@ table,
     color: $brand-danger;
   }
 
-  .form-control,
-  .form-control:focus,
   .input-group-addon {
-    border-color: $brand-danger;
+    border: none;
   }
 }
 
@@ -96,56 +181,71 @@ table,
     color: $brand-success;
   }
 
-  .form-control,
-  .form-control:focus,
   .input-group-addon {
-    border-color: $brand-success;
+    border: none;
   }
 }
 
-legend {
-  color: #fff;
+.form-control:focus {
+  @include box-shadow(none);
 }
 
-.input-group-addon {
-  background-color: $btn-default-bg;
+.has-warning,
+.has-error,
+.has-success {
+  .form-control:focus {
+    @include box-shadow(none);
+  }
 }
 
 // Navs =======================================================================
 
-.nav-tabs,
-.nav-pills,
-.breadcrumb,
-.pager {
+.nav {
+  .open > a,
+  .open > a:hover,
+  .open > a:focus {
+    border-color: transparent;
+  }
+}
 
+.nav-tabs {
+  > li > a {
+    color: $text-color;
+  }
+}
+
+.nav-pills {
+  > li > a {
+    color: $text-color;
+  }
+}
+
+.pager {
   a {
-    color: #fff;
+    color: $text-color;
   }
 }
 
 // Indicators =================================================================
 
+.label {
+  font-weight: 300;
+}
+
 .alert {
+  color: #fff;
 
-  .alert-link,
-  a {
-    color: $alert-warning-text;
-    text-decoration: underline;
-  }
-
-  .close {
-    text-decoration: none;
+  a,
+  .alert-link {
+    color: #fff;
   }
 }
 
 .close {
-  color: #fff;
-  text-decoration: none;
   opacity: 0.4;
 
   &:hover,
   &:focus {
-    color: #fff;
     opacity: 1;
   }
 }
@@ -154,10 +254,8 @@ legend {
 
 // Containers =================================================================
 
-a.thumbnail:hover,
-a.thumbnail:focus,
-a.thumbnail.active {
-  border-color: $thumbnail-border;
+.well {
+  @include box-shadow(none);
 }
 
 a.list-group-item {
@@ -165,7 +263,7 @@ a.list-group-item {
   &.active,
   &.active:hover,
   &.active:focus {
-    border-color: $list-group-border;
+    border: none;
   }
 
   &-success {
@@ -202,9 +300,33 @@ a.list-group-item {
   }
 }
 
-.jumbotron {
+.panel {
+  border: none;
 
-  h1, h2, h3, h4, h5, h6 {
-    color: #fff;
+  &-default > .panel-heading {
+    background-color: $table-bg-hover;
+    color: $text-color;
+  }
+}
+
+.thumbnail {
+  background-color: $well-bg;
+  border: none;
+}
+
+.modal {
+  padding: 0;
+
+  &-header,
+  &-footer {
+    background-color: $table-bg-hover;
+    border: none;
+    border-radius: 0;
+  }
+}
+
+.popover {
+  &-title {
+    border: none;
   }
 }
