@@ -8,12 +8,12 @@
 
 
     <url>
-        <loc>http://xpresspluss.com</loc>
+        <loc>http://secaucustaxi.xpresspluss.com</loc>
         <changefreq>never</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://xpresspluss.com/onlineReservation</loc>
+        <loc>http://secaucustaxi.xpresspluss.com/onlineReservation</loc>
         <changefreq>never</changefreq>
         <priority>1.0</priority>
     </url>
